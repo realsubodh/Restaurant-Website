@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Restaurant | Subodh Singh</title>
+  <style>
+    body {
+      margin: 0px;
+
+    }
+
+    header {
+      width: 100%;
+      height: 400px;
+      color: rgb(8, 7, 7);
+      max-height: fit-content;
+      background-image: url(https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?t=st=1648721628~exp=1648722228~hmac=2ef1cf6f57e2ed869ee7088fa0c5075629f4678d1087df5e7ab1196f295de23e&w=1800);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .name {
+      width: 420px;
+      height: 270px;
+      margin-left: 180px;
+    }
+
+    .name h1 {
+      margin: 0px;
+      padding: 72px;
+      font-family: Chalkduster, fantasy;
+      font-size: 60px;
+      color: #000000;
+    }
+
+    header h3 {
+      margin: 0px;
+      width: 350px;
+      font-family: Bradley Hand, cursive;
+      padding: 12px;
+      margin-left: 146px;
+      background-color: rgba(240, 181, 3, 0.784);
+      text-align: center;
+    }
+
+    nav {
+      height: 110px;
+    }
+
+    .nav2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+
+    .nav2 a {
+      text-decoration: none;
+      padding: 15px;
+      color: rgb(240, 234, 234);
+      background-color: rgb(0, 0, 0);
+      border-radius: 4px;
+    }
+
+    .nav2 a:hover {
+      color: #0b0a0a;
+      background-color: rgba(252, 251, 249, 0.784);
+      box-shadow: 0px 0px 15px 1px black;
+    }
+
+    .a-box {
+      text-align: center;
+      width: 60px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      grid-template-rows: 300px 300px;
+      column-gap: 30px;
+      row-gap: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 650px;
+    }
+
+    #item1 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      background: url(https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: -6px 0px 25px 1px rgba(21, 21, 21, 0.929);
+    }
+
+    #item1:hover {
+      box-shadow: -6px 0px 10px 1px rgba(29, 29, 29, 0.451);
+    }
+
+    #item5 {
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+
+    #item1 h2 {
+      font-family: Chalkduster, fantasy;
+      text-align: center;
+      font-size: 40px;
+      color: white;
+    }
+
+    .login-form {
+      width: 400px;
+      height: 410px;
+      border-radius: 5px;
+      margin: auto;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: rgba(255, 254, 255, 0.728);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 7px;
+      margin: auto;
+      display: block;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 12px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    #forgot-password {
+      text-decoration: none;
+      margin-left: 146px;
+      color: #100088;
+    }
+
+    input[type="submit"] {
+      width: 95%;
+      margin: auto;
+      display: block;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 3px;
+      background-color: #08830a;
+      color: white;
+      margin-bottom: 7px;
+    }
+
+    .login-form h4 {
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 100;
+
+    }
+
+    .newuser {
+      text-decoration: none;
+      margin-left: 37%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 13px;
+      color: #0e0458;
+    }
+
+    .socialmedia {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .socialmedia2 {
+      display: inline-flex;
+      width: 100%;
+      height: 50px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .links {
+      width: 110px;
+      height: 35px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 25px;
+      box-shadow: 0px 0px 8px rgb(0, 0, 0);
+    }
+
+    .links a {
+      text-decoration: none;
+      color: white;
+      margin-top: 10px;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .dish {
+      background-color: #f6f6f6;
+    }
+
+    .dish:hover img {
+      height: 290px;
+      transition: 0.3s;
+    }
+
+    .dish:hover h2 {
+      display: none;
+    }
+
+    #item5 {
+      background: url(https://media.istockphoto.com/photos/africanamerican-man-pointing-at-white-blank-board-picture-id1159989540?k=20&m=1159989540&s=612x612&w=0&h=XCYL3lS6d06WIzQ0-A6hqB1gawrgvFaOL-jYoky3BKQ=);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-color: #FBFBFB;
+      box-shadow: 0px 0px 20px black;
+    }
+
+    .container2 {
+      width: 100vw;
+      height: 300px;
+      color: rgb(7, 7, 7);
+      background: url(https://media.istockphoto.com/photos/indian-man-eating-picture-id488962065?k=20&m=488962065&s=612x612&w=0&h=71736PgRC1fVeFM4LGZlgHd6Wf2O76axAyK0dvdOORg=);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-color: #F3F4F6;
+    }
+
+    input[type="search"] {
+      width: 450px;
+      height: 40px;
+      border: none;
+      border-radius: 7px;
+      margin-left: 30%;
+      text-align: center;
+      font-size: 16px;
+
+    }
+
+    select {
+      width: 120px;
+      height: 40px;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      text-align: center;
+      color: #666565;
+    }
+
+    .container3 {
+      width: 100vw;
+      height: 600px;
+    }
+
+    .masterchef {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      justify-content: space-around;
+    }
+
+    .chef {
+      width: 350px;
+      height: 400px;
+      background-color: #ededed;
+    }
+
+    footer {
+      width: 100vw;
+      height: 100px;
+      padding: 15px;
+      background-color: #EBEEED;
+    }
+
+    .path-0 {
+      animation: pathAnim-0 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .special {
+      height: 700px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    @keyframes pathAnim-0 {
+      0% {
+        d: path("M 0,500 C 0,500 0,250 0,250 C 62.956410256410265,217.24102564102566 125.91282051282053,184.4820512820513 200,184 C 274.08717948717947,183.5179487179487 359.3051282051281,215.31282051282054 451,227 C 542.6948717948719,238.68717948717946 640.8666666666668,230.26666666666668 722,218 C 803.1333333333332,205.73333333333332 867.2282051282051,189.6205128205128 945,204 C 1022.7717948717949,218.3794871794872 1114.2205128205128,263.25128205128203 1199,276 C 1283.7794871794872,288.74871794871797 1361.8897435897436,269.374358974359 1440,250 C 1440,250 1440,500 1440,500 Z");
+      }
+
+      25% {
+        d: path("M 0,500 C 0,500 0,250 0,250 C 61.220512820512795,258.19743589743587 122.44102564102559,266.3948717948718 214,261 C 305.5589743589744,255.6051282051282 427.4564102564103,236.61794871794868 504,244 C 580.5435897435897,251.38205128205132 611.7333333333332,285.1333333333334 680,304 C 748.2666666666668,322.8666666666666 853.6102564102564,326.84871794871793 936,332 C 1018.3897435897436,337.15128205128207 1077.825641025641,343.4717948717949 1158,330 C 1238.174358974359,316.5282051282051 1339.0871794871796,283.2641025641026 1440,250 C 1440,250 1440,500 1440,500 Z");
+      }
+
+      50% {
+        d: path("M 0,500 C 0,500 0,250 0,250 C 90.38717948717951,209.4871794871795 180.77435897435902,168.97435897435898 263,156 C 345.225641025641,143.02564102564102 419.2897435897436,157.5897435897436 498,185 C 576.7102564102564,212.4102564102564 660.0666666666667,252.66666666666669 741,252 C 821.9333333333333,251.33333333333331 900.4435897435899,209.74358974358975 969,200 C 1037.5564102564101,190.25641025641025 1096.1589743589743,212.35897435897434 1173,226 C 1249.8410256410257,239.64102564102566 1344.9205128205128,244.82051282051282 1440,250 C 1440,250 1440,500 1440,500 Z");
+      }
+
+      75% {
+        d: path("M 0,500 C 0,500 0,250 0,250 C 97.92564102564103,266.2871794871795 195.85128205128206,282.574358974359 262,252 C 328.14871794871794,221.42564102564103 362.52051282051275,143.9897435897436 438,158 C 513.4794871794873,172.0102564102564 630.0666666666666,277.4666666666667 716,293 C 801.9333333333334,308.5333333333333 857.2128205128207,234.14358974358976 939,232 C 1020.7871794871793,229.85641025641024 1129.0820512820512,299.9589743589744 1217,315 C 1304.9179487179488,330.0410256410256 1372.4589743589745,290.0205128205128 1440,250 C 1440,250 1440,500 1440,500 Z");
+      }
+
+      100% {
+        d: path("M 0,500 C 0,500 0,250 0,250 C 62.956410256410265,217.24102564102566 125.91282051282053,184.4820512820513 200,184 C 274.08717948717947,183.5179487179487 359.3051282051281,215.31282051282054 451,227 C 542.6948717948719,238.68717948717946 640.8666666666668,230.26666666666668 722,218 C 803.1333333333332,205.73333333333332 867.2282051282051,189.6205128205128 945,204 C 1022.7717948717949,218.3794871794872 1114.2205128205128,263.25128205128203 1199,276 C 1283.7794871794872,288.74871794871797 1361.8897435897436,269.374358974359 1440,250 C 1440,250 1440,500 1440,500 Z");
+      }
+    }
+
+    .firstwave {
+      position: absolute;
+      bottom: 0%;
+      height: 500px;
+      z-index: -1;
+    }
+
+    .testimonialfirst {
+      margin-top: 90px;
+      height: 400px;
+      width: 400px;
+      z-index: 1;
+      background-color: #444343;
+      position: relative;
+    }
+
+    .ceo {
+      width: 100vw;
+      height: 700px;
+      margin-top: 30px;
+      position: relative;
+    }
+
+    .blob {
+      position: absolute;
+      height: 600px;
+      z-index: -1;
+      right: 20px;
+    }
+
+    .vision {
+      width: 850px;
+      height: 360px;
+      position: absolute;
+      background-color: #e3e3f8;
+      top: 117px;
+      left: 20px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="name">
+      <h1>Chill N! Despacito</h1>
+      <h3>Life<sup>'</sup>s too short for the same boring food..</h3>
+    </div>
+  </header>
+  <nav>
+    <div class="nav2">
+      <a class="a-box" href="#">Home</a>
+      <a class="a-box" href="#">About</a>
+      <a class="a-box" href="#">Menu</a>
+      <a class="a-box" href="#">Gallery</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Healthy Tips</a>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="items" id="item1">
+        <h2>Welcome to your Restaurant!</h2>
+        <hr>
+        <div class="login-form">
+          <form action="">
+            <input type="text" name="username" id="username" placeholder="Username / Email-Id">
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <input type="checkbox" name="check" id="checkbox">
+            <label for="checkbox">Remember me</label>
+            <a href="#" id="forgot-password">Forgot Password</a>
+            <input type="submit" value="Login">
+            <a href="#" class="newuser">New User / Register</a>
+            <h4>Or</h4>
+            <div class="socialmedia">
+              <div class="links" style="background-color: #CF473C;">
+                <a href="http://www.google.com" target="_blank">Google</a>
+              </div>
+              <div class="links" style="background-color: #076197;">
+                <a href="http://www.linkedin.com">Linkedin</a>
+              </div>
+            </div>
+            <div class="socialmedia2">
+              <div class="links" style="background-color: #3E5D9A;">
+                <a href="http://www.facebook.com" target="_self">Facebook</a>
+              </div>
+              <div class="links" style="background-color: rgb(2, 2, 134);">
+                <a href="http://www.twitter.com">Twitter</a>
+              </div>
+            </div>
+            <p style="font-size: 12px; text-align: center;">By creating this account,you agree to our <a href="#"
+                style="text-decoration: none; color:#08830a;">Privacy
+                Policy</a> &amp; <a href="#" style="text-decoration: none; color:#08830a;">Cookie
+                Policy.</a> </p>
+          </form>
+        </div>
+      </div>
+      <div class=" dish">
+        <img
+          src="https://media.istockphoto.com/photos/smoked-and-spicy-tandoori-chicken-grilling-with-smoke-picture-id995903748?k=20&m=995903748&s=612x612&w=0&h=km1d5HjrFbezaZttak_Ex9TZ70qH_Mht0EOLNJlH_Jg="
+          alt="" width="100%" height="240px" style="border-radius: 7px;box-shadow: 0px 9px 15px black;">
+        <h2
+          style=" font-size: 23px; text-align: center;color: rgb(16, 15, 15);font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 400;">
+          Tandoori Chicken</h2>
+      </div>
+      <div class="dish">
+        <img
+          src="https://media.istockphoto.com/photos/chilli-paneer-tikka-or-paneer-kabab-picture-id629050018?k=20&m=629050018&s=612x612&w=0&h=0mE0FtZQqWDtW4QyDoqHHqi6N7f2hTSf0r81qPAXD2k="
+          alt="" width="100%" height="240px" style="border-radius: 7px;box-shadow: 0px 9px 15px black;">
+        <h2
+          style=" font-size: 23px; text-align: center;color: black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 400;">
+          Paneer Tikka</h2>
+      </div>
+      <div class="dish">
+        <img
+          src="https://media.istockphoto.com/photos/gajar-ka-halwa-picture-id1208754471?k=20&m=1208754471&s=612x612&w=0&h=_fExvlOGFoY_VaQb-W1p6nZmzQT4sLJhF0e3x2uT3yo="
+          alt="" width="100%" height="240px" style="border-radius: 7px;box-shadow: 0px 9px 15px black;">
+        <h2
+          style=" font-size: 23px; text-align: center;color: black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 400;">
+          Gajar ka Halva</h2>
+      </div>
+      <div class="items" id="item5">
+        <img
+          src="https://st.depositphotos.com/2274151/2585/i/950/depositphotos_25850083-stock-photo-special-offer-stamp.jpg"
+          alt="" width="160ppx" height="150px">
+        <h3 style="margin-top: 10px;font-family: Bradley Hand, cursive; margin-left: 16%;
+      font-size: 25px; ">On Booking the
+          Gold Table in
+          our
+          Restaurant,<br> you'll get the
+          cashback of worth Rs
+          5000.</h3>
+      </div>
+    </div>
+    <div class="container2">
+      <h2 style="text-align: center; font-size: 40px;font-weight: 100; padding: 30px;">
+        Discover the best food and cuisine in your city.</h2>
+      <input type="search" name="search" id="search" placeholder="Enter your city name here">
+      <span>
+        <select name="state" id="statename">
+          <option value="">Delhi</option>
+          <option value="up">Uttar Pradesh</option>
+          <option value="delhi">Delhi</option>
+          <option value="M">Maharashtra</option>
+          <option value="mp">Madhya Pradesh</option>
+          <option value="p">Punjab</option>
+          <option value="b">Bihar</option>
+          <option value="r">Rajasthan</option>
+        </select>
+      </span>
+    </div>
+    <div class="special">
+      <svg class="firstwave" width="100%" height="100%" id="svg" viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+        <defs>
+          <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
+            <stop offset="5%" stop-color="#f3f4f6ff"></stop>
+            <stop offset="95%" stop-color="#abb8c3ff"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0,500 C 0,500 0,250 0,250 C 62.956410256410265,217.24102564102566 125.91282051282053,184.4820512820513 200,184 C 274.08717948717947,183.5179487179487 359.3051282051281,215.31282051282054 451,227 C 542.6948717948719,238.68717948717946 640.8666666666668,230.26666666666668 722,218 C 803.1333333333332,205.73333333333332 867.2282051282051,189.6205128205128 945,204 C 1022.7717948717949,218.3794871794872 1114.2205128205128,263.25128205128203 1199,276 C 1283.7794871794872,288.74871794871797 1361.8897435897436,269.374358974359 1440,250 C 1440,250 1440,500 1440,500 Z"
+          stroke="none" stroke-width="0" fill="url(#gradient)"
+          class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+      </svg>
+      <div class="testimonialfirst">
+        <img src="https://i.pinimg.com/474x/5e/7a/eb/5e7aeb7f95d520ec577fb1554377e56a.jpg" alt="" height="150px"
+          style="border-radius: 100%;position: absolute; top: -40px; left: 150px; box-shadow: 2px 0px 25px black;">
+        <h3
+          style="font-family:Bradley Hand, cursive; position: relative; top: 120px; text-align: center;color: white;font-size: 25px; ">
+          Robert
+          Downey Jr.</h3>
+        <p
+          style="color: white;position: absolute;top: 190px; text-align: center; font-family: Nunito, sans-serif;font-size: 14px;margin: 20px;">
+          For the first time I've visited India, and also for the first ever time I've eaten the Indian cuisine here and
+          I'm in love with the indian cuisine as well as Chill N! Despacito. I just can't get over this Indian
+          Restaurant cuisine.
+        </p>
+      </div>
+      <div class="testimonialfirst">
+        <img src="https://i.pinimg.com/474x/7f/13/a2/7f13a204592a529baea90ff8dd63c1e6.jpg" alt="" height="150px"
+          style="border-radius: 100%;position: absolute; top: -40px; left: 150px; box-shadow: 2px 0px 25px black;">
+        <h3
+          style="font-family:Bradley Hand, cursive; position: relative; top: 120px; text-align: center;color: white; font-size: 25px; ">
+          Chris Evans.
+        </h3>
+        <p
+          style="color: white;position: absolute;top: 190px; text-align: center; font-family: Nunito, sans-serif;font-size: 14px;margin: 20px; ">
+          I mean, I had never expected that when we go to India for Avengers promotion, I will get some delicious
+          american cuisine but I'm very glad that Chill N! Despacito has almost every variety of American cuisine's with
+          Indian flavour. And believe me guys the taste is so so awesome that I can't even explain it in my words. I'm
+          gonna to miss this restra.
+        </p>
+      </div>
+      <div class="testimonialfirst">
+        <img src="https://i.pinimg.com/474x/4b/30/85/4b3085c1cca3b26b92237f9785f2e772.jpg" alt="" height="150px"
+          style="border-radius: 100%;position: absolute; top: -40px; left: 150px; box-shadow: 2px 0px 25px black;">
+        <h3
+          style="font-family:Bradley Hand, cursive;color: white; position: relative; top: 120px; text-align: center;font-size: 25px; ">
+          Elizabeth
+          Olsen.
+        </h3>
+        <p
+          style="color: white;position: absolute;top: 190px; text-align: center; font-family: Nunito, sans-serif;font-size: 14px;margin: 20px;">
+          Now I'm in love with hot spicy North Indian food. And the reason is Chill N! Despacito,I think this Restaurant
+          has some best Master-chef's of the world. Whenever I came to India,I'm gonna to visit this place anyhow.
+        </p>
+      </div>
+    </div>
+    <div class="container3">
+      <h3 style="font-family:Chalkduster, fantasy;padding: 20px; text-align: center;font-size: 25px;  ">Our
+        Master-chef's
+      </h3>
+      <div class="masterchef">
+        <div class="chef">
+          <img src="https://i.pinimg.com/474x/86/33/20/8633201d7bb4f6bc98b71756d661aee5.jpg" alt="" width="100%"
+            height="340px" style="box-shadow: 0px 9px 15px black;">
+          <h2 style="font-family: cursive; text-align: center;font-size: 20px; margin: 15px;">Rajeev Khanna</h2>
+        </div>
+        <div class="chef">
+          <img
+            src="https://images.unsplash.com/photo-1592332297790-c7c27c38ecb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFzdGVyJTIwY2hlZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+            alt="" width="100%" height="340px" style="box-shadow: 0px 9px 15px black;">
+          <h2 style="font-family: cursive; text-align: center;font-size: 20px; margin: 15px;">Vicky Ratnani</h2>
+        </div>
+        <div class="chef">
+          <img
+            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFzdGVyJTIwY2hlZnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60"
+            alt="" width="100%" height="340px" style="box-shadow: 0px 9px 15px black;">
+          <h2 style="font-family: cursive; text-align: center;font-size: 20px; margin: 15px;">Niklas Christal</h2>
+        </div>
+      </div>
+    </div>
+    <hr>yt
+    <div class="ceo">
+      <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#F2F4F8"
+          d="M46.1,-36.4C59.4,-20,69.9,-0.8,68.6,20C67.3,40.9,54.3,63.4,35.9,70.9C17.5,78.3,-6.5,70.7,-25.8,59.2C-45.2,47.7,-60.1,32.4,-63.8,14.9C-67.5,-2.7,-60.2,-22.4,-47.7,-38.6C-35.2,-54.9,-17.6,-67.6,-0.6,-67.1C16.3,-66.6,32.7,-52.8,46.1,-36.4Z"
+          transform="translate(100 100)" />
+      </svg>
+      <img src="subodhimg.png" width="300px" style="position: absolute; right: 150px; top: 30px;" alt="">
+      <div class="vision">
+        <p style="margin: 50px; margin-top: 80px; text-align: center;">My only vision behind this 4⭐️ Restaurant is that
+          taste of our
+          Indian food can reaach
+          to the tongue of people
+          living abroad and the foreign taste can reach to Indian's mouth. And now, I'm very happy and glad that we are
+          operating over 70+ countries all over the world including America as well as many Europian Countries. Our only
+          focus is to enhance our services and taste daily.</p>
+        <q style="margin: 113px;">Doesn't matter from where do you came,&nbsp; the thing that only
+          matters is where you
+          are going.</q>
+
+        <h3 style="margin-left: 680px;font-size: 20px; font-weight: 100; font-family: cursive;">
+          &approx; Subodh singh
+        </h3>
+        <p style="margin-left: 690px; display: inline;">Founder and CEO</p>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <h4
+      style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: 100; text-align: center;padding-top: -60px;">
+      All
+      design and
+      content is &copy;
+      <span style="color: #08830a;">Subodh Singh</span>
+    </h4>
+  </footer>
+  <script>
+
+  </script>
+</body>
+
+</html>
